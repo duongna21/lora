@@ -19,4 +19,5 @@ python train_lora_dreambooth.py \
   --lr_warmup_steps=0 \
   --mixed_precision=fp16 \
   --use_8bit_adam \
+  --save_steps=1000 \
   --max_train_steps=10000

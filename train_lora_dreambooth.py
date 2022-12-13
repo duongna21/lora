@@ -563,8 +563,18 @@ def main(args):
         subfolder="unet",
         revision=args.revision,
     )
-    
+
     unet.requires_grad_(False)
+    from diffusers.utils.import_utils import is_xformers_available
+    if is_xformers_available():
+        try:
+            unet.enable_xformers_memory_efficient_attention()
+        except Exception as e:
+            logger.warning(
+                "Could not enable memory efficient attention. Make sure xformers is installed"
+                f" correctly and a GPU is available: {e}"
+            )
+
     unet_lora_params, _ = inject_trainable_lora(unet)
 
     for _up, _down in extract_lora_ups_down(unet):

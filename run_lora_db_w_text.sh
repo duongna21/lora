@@ -10,7 +10,7 @@ accelerate launch train_lora_dreambooth.py \
   --instance_prompt="photo of sks woman" \
   --train_text_encoder \
   --resolution=512 \
-  --train_batch_size=2 \
+  --train_batch_size=1 \
   --gradient_accumulation_steps=1 \
   --learning_rate=1e-4 \
   --learning_rate_text=5e-5 \

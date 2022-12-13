@@ -17,4 +17,6 @@ accelerate launch train_lora_dreambooth.py \
   --color_jitter \
   --lr_scheduler="constant" \
   --lr_warmup_steps=0 \
+  --mixed_precision=fp16 \
+  --use_8bit_adam \
   --max_train_steps=10000

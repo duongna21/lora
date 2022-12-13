@@ -563,6 +563,7 @@ def main(args):
         subfolder="unet",
         revision=args.revision,
     )
+    
     unet.requires_grad_(False)
     unet_lora_params, _ = inject_trainable_lora(unet)
 

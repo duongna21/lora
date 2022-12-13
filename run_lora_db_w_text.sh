@@ -3,7 +3,7 @@ export MODEL_NAME="runwayml/stable-diffusion-v1-5"
 export INSTANCE_DIR="../maya-lerner"
 export OUTPUT_DIR="../outputs/maya-lora"
 
-accelerate launch train_lora_dreambooth.py \
+python train_lora_dreambooth.py \
   --pretrained_model_name_or_path=$MODEL_NAME  \
   --instance_data_dir=$INSTANCE_DIR \
   --output_dir=$OUTPUT_DIR \

@@ -1,7 +1,7 @@
 #https://github.com/huggingface/diffusers/tree/main/examples/dreambooth
-export MODEL_NAME="runwayml/stable-diffusion-v1-5"
+export MODEL_NAME="stabilityai/stable-diffusion-2-1-base"
 export INSTANCE_DIR="../maya-lerner"
-export OUTPUT_DIR="../outputs/maya-lora"
+export OUTPUT_DIR="../outputs/maya-lora-sd21"
 
 python train_lora_dreambooth.py \
   --pretrained_model_name_or_path=$MODEL_NAME  \

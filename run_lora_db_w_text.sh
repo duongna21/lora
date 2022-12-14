@@ -20,4 +20,8 @@ python train_lora_dreambooth.py \
   --mixed_precision=fp16 \
   --use_8bit_adam \
   --save_steps=1000 \
-  --max_train_steps=10000
+  --max_train_steps=5000 \
+  --class_data_dir="sd15-woman" \
+  --with_prior_preservation --prior_loss_weight=1.0 \
+  --class_prompt="photo of woman" \
+  --num_class_images=400

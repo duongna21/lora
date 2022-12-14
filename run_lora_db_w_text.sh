@@ -2,7 +2,8 @@
 #export MODEL_NAME="stabilityai/stable-diffusion-2-1-base"
 export MODEL_NAME="runwayml/stable-diffusion-v1-5"
 export INSTANCE_DIR="../maya-lerner"
-export OUTPUT_DIR="../outputs/maya-lora-sd21"
+#export OUTPUT_DIR="../outputs/maya-lora-sd21"
+export OUTPUT_DIR="../outputs/maya-lora-prior"
 
 python train_lora_dreambooth.py \
   --pretrained_model_name_or_path=$MODEL_NAME  \

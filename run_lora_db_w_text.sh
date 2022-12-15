@@ -27,4 +27,4 @@ python train_lora_dreambooth.py \
   --class_data_dir="sd15-woman" \
   --with_prior_preservation --prior_loss_weight=1.0 \
   --class_prompt="photo of woman" \
-  --num_class_images=1000
+  --num_class_images=500
